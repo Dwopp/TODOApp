@@ -14,15 +14,21 @@ public class TODOApp extends MIDlet implements CommandListener{
     TextField txtMauNgapain, txtDimana;
     DateField dateKapan;
     RecordStore rs;
+    Ticker ticker = new Ticker("TODOApp");
     byte[] data = null;
     Command exitCommand = new Command("Exit", Command.EXIT, 1);
     Command okeCommand = new Command("OKE", Command.OK, 1);
     Command simpanCommand = new Command("Save", Command.OK, 1);
     
+    public TODOApp(){
+        
+    } 
+    
 
     public void startApp() {
         if (display == null) {
             display = Display.getDisplay(this);
+            canvas = new Menu();
         }
     }
     
